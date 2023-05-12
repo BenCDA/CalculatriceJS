@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculatrice</title>
     <link rel="stylesheet" href="style.css">
+    <!-- On lie notre fichier HTML à notre feuille de style CSS. -->
 </head>
 <body>
+    <!-- On crée la classe calc pour représenter le "squelette" de la calculatrice. -->
 <div class="calc">
+    <!-- La classe ecran ne servira qu'à représenter l'écran de la calculatrice, c'est pour ceci qu'elle est vide dans le HTML. -->
     <div class="ecran"></div>
+    <!-- La classe touches servira à créer les boutons de notre calculatrice. -->
     <div class="touches">
         <button data-clavier="8" class="bouton">C</button>
         <button data-clavier="53" class="bouton">(</button>
@@ -35,7 +39,7 @@
 
 
 
-
+<!-- On lie notre fichier HTML à notre fichier JavaScript. -->
     <script src="script.js"></script>
 </body>
 </html>
