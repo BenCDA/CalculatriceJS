@@ -14,8 +14,8 @@ document.addEventListener('click', (e) => {
 })
 
 // Création constante pour supprimer le dernier caractère saisi.
-const boutonSupprimer = document.querySelector('#bouton-supprimer');
-boutonSupprimer.addEventListener('click', () => {
+const boutonEffacer = document.querySelector('#bouton-effacer');
+boutonEffacer.addEventListener('click', () => {
     ecran.textContent = ecran.textContent.slice(0, -1);
 });
 
