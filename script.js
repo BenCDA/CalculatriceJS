@@ -13,6 +13,12 @@ document.addEventListener('click', (e) => {
     calculer(value)
 })
 
+// Création constante pour supprimer le dernier caractère saisi.
+const boutonSupprimer = document.querySelector('#bouton-supprimer');
+boutonSupprimer.addEventListener('click', () => {
+    ecran.textContent = ecran.textContent.slice(0, -1);
+});
+
 //Fonction pour calculer, prend en paramètre la valeur du keycode e
 const calculer = (value) => {
     if (dataClavier.includes(value)) {
@@ -23,7 +29,7 @@ const calculer = (value) => {
             case '13':
                 const calcul = eval(ecran.textContent);
                 ecran.textContent = calcul    
-                break;
+                break;  
             default:
                 const indexClavier = dataClavier.indexOf(value);
                 const touche = touches[indexClavier];
