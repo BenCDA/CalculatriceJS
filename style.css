@@ -12,22 +12,24 @@
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    /* On utilise linear-gradient pour la couleur de fond d'écran pour avoir un "dégradé" de couleur  */
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   }
  
   /*Mise en forme du "squelette" de la calculatrice.  */
-  .calculatrice {
+  .calc {
     background-color: #222222;
     display: flex;
     flex-direction: column;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 5px black;
+    max-width: 100%;
   }
   
   /* Ici on fait apparaître l'écran de la calculatrice, on lui définit une taille, une couleur et on le place en haut de la calculatrice. */
   .ecran {
-    width: 100%;
+    max-width: 100%;
     height: 100px;
     background-color: rgb(198, 237, 255);
     margin-bottom: 10px;
@@ -81,5 +83,6 @@
     grid-column: span 2;
     background-color: #ff9900;
     color: white;
-  
+    border-radius: 5px;
   }
+  
