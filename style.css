@@ -1,0 +1,77 @@
+/* On applique des effets de base à l'ensemble de la page n'utilisant pas de normalize.css ici. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  }
+ 
+  /*Mise en forme du "squelette" de la calculatrice.  */
+  .calculatrice {
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px black;
+  }
+  
+  /* Ici on fait apparaître l'écran de la calculatrice, on lui définit une taille, une couleur et on le place en haut de la calculatrice. */
+  .ecran {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(198, 237, 255);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5px;
+    font-size: 25px;
+  }
+  
+  /* Mise en place des touches sous formes de grilles avec 4 colonnes et 5 lignes, on les espaces un minimum pour que la calculatrice soit agréable à utilisée. */
+  .touches {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 7px;
+  }
+  
+  /* Mise en forme des bouttons. */
+  button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 3px #a8a8a8;
+    font-size: 18px;
+  }
+  /* On utilise :active pour donner un effet visuel lorsque l'utilisateur appuie sur un boutton. */
+  button:active {
+    box-shadow: 0 1px #a8a8a8;
+    transform: translateY(2px);
+  }
+  
+  button[data-key="8"] {
+    background-color: #ff9900;
+    font-weight: bold;
+    color: white;
+  }
+  
+  button[data-key="13"] {
+    grid-column: span 2;
+    background-color: #36e700;
+    font-weight: bold;
+    color: white;
+    font-size: 35px;
+  }
